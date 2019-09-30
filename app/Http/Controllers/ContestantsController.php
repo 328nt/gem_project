@@ -34,9 +34,31 @@ class ContestantsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $rq)
     {
-        //
+        $this->validate($rq,[
+
+        ],[
+
+        ]);
+        $conts = new Contestants();
+        $conts->name = $rq->name;
+        $conts->firstname = $rq->firstname;
+        $conts->dob = $rq->dob;
+        $conts->class = $rq->class;
+        $conts->grade = $rq->grade;
+        $conts->school = $rq->school;
+        $conts->address = $rq->address;
+        $conts->ward = $rq->ward;
+        $conts->district = $rq->district;
+        $conts->province = $rq->province;
+        $conts->parentname = $rq->parentname;
+        $conts->email = $rq->email;
+        $conts->phone = $rq->phone;
+        $conts->name_link = $rq->name_link;
+        $conts->link = $rq->link;
+        $conts->save();
+        return redirect()->back()->with('msg','okla');
     }
 
     /**
@@ -56,9 +78,10 @@ class ContestantsController extends Controller
      * @param  \App\Contestants  $contestants
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contestants $contestants)
+    public function edit($id)
     {
-        //
+        $cont = Contestants::find($id);
+        return view('be/contestants/edit', ['cont'=>$cont]);
     }
 
     /**
@@ -68,9 +91,31 @@ class ContestantsController extends Controller
      * @param  \App\Contestants  $contestants
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contestants $contestants)
+    public function update(Request $rq, $id)
     {
-        //
+        $this->validate($rq,[
+
+        ],[
+
+        ]);
+        $conts = Contestants::find($id);
+        $conts->name = $rq->name;
+        $conts->firstname = $rq->firstname;
+        $conts->dob = $rq->dob;
+        $conts->class = $rq->class;
+        $conts->grade = $rq->grade;
+        $conts->school = $rq->school;
+        $conts->address = $rq->address;
+        $conts->ward = $rq->ward;
+        $conts->district = $rq->district;
+        $conts->province = $rq->province;
+        $conts->parentname = $rq->parentname;
+        $conts->email = $rq->email;
+        $conts->phone = $rq->phone;
+        $conts->name_link = $rq->name_link;
+        $conts->link = $rq->link;
+        $conts->save();
+        return redirect()->back()->with('msg','okla');
     }
 
     /**
@@ -79,8 +124,10 @@ class ContestantsController extends Controller
      * @param  \App\Contestants  $contestants
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contestants $contestants)
+    public function destroy($id)
     {
-        //
+        $cont = Contestants::find($id);
+        $cont->delete();
+        return redirect('admin/contestants/list');
     }
 }

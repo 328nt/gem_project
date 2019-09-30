@@ -1,12 +1,12 @@
 
 @extends('be.layouts.index')
 @section('title')
-list
+edit contestants
 @endsection
 @section('content')
 
 @include('msg')
-<div class="col-md-8">
+<div class="col-md-12">
     <div class="ibox">
         <div class="ibox-head">
             <div class="ibox-title">Thêm nhân viên</div>
@@ -16,46 +16,109 @@ list
             </div>
         </div>
         <div class="ibox-body">
-            <form action="admin/users/edit/{{$user->id}}"  method="post" enctype="multipart/form-data" class="form-horizontal" id="form-sample-1" novalidate="novalidate">
+            <form action="admin/contestants/edit/{{$cont->id}}"  method="post" enctype="multipart/form-data" class="form-horizontal" id="form-sample-1" novalidate="novalidate">
                 {{ csrf_field() }}
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Fullname</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" name="name" type="text" value="{{$user->name}}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" name="email" type="text" value="{{$user->email}}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Change password</label>
-                        <div class="col-sm-10">
-                                <input type="checkbox" name="changepass" id="changepassword">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="name" type="text" value="{{$cont->name}}" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">first name</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="firstname" type="text"value="{{$cont->firstname}}" placeholder="first Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">DoB</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="dob" type="text" value="{{$cont->dob}}" placeholder="DOB">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">class</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="class" type="text" value="{{$cont->class}}" placeholder="class">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">grade</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="grade" type="text" value="{{$cont->grade}}" placeholder="grade">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">school</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="school" type="text" value="{{$cont->school}}" placeholder="school">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">address</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="address" type="text" value="{{$cont->address}}" placeholder="address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">ward</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="ward" type="text" value="{{$cont->ward}}" placeholder="ward">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">district</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="district" type="text" value="{{$cont->district}}" placeholder="district">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">province</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="province" type="text" value="{{$cont->province}}" placeholder="province">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">parentname</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="parentname" type="text" value="{{$cont->parentname}}" placeholder="parentname">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="email" type="text" value="{{$cont->email}}" placeholder="Email address">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">phone</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="phone" type="text" value="{{$cont->phone}}" placeholder="phone">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">name_link</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="name_link" type="text" value="{{$cont->name_link}}" placeholder="name_link">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">link</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="link" type="text" value="{{$cont->link}}" placeholder="link">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input class="form-control password" name="pwd" type="password" disabled="">
-                    </div>
                 </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Re-Pasword</label>
-                    <div class="col-sm-10">
-                        <input class="form-control password" name="repassword" type="password" disabled="" >
-                    </div>
-                </div>
-                
-                <div class="form-group row">
-                    
-                        <td><img width="50px" src="upload/users/{{$user->image}}" alt=""></td>
-                        <label class="col-sm-2 col-form-label">Image</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" name="image" type="file">
-                        </div>
                     </div>
                 <div class="form-group row">
                     <div class="col-sm-10 ml-sm-auto">

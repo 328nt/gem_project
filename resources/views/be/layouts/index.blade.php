@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>HRM - @yield('title')</title>
+    <title>GEM - @yield('title')</title>
 <base href="{{asset('')}}">
     <!-- GLOBAL MAINLY STYLES-->
     <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -41,7 +41,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="ibox bg-success color-white widget-stat">
                             <div class="ibox-body">
-                                <h2 class="m-b-5 font-strong">1</h2>
+                                <h2 class="m-b-5 font-strong">{{count(App\News::All())}}</h2>
                                 <div class="m-b-5">NEWs</div><i class="ti-shopping-cart widget-stat-icon"></i>
                                 <div><i class="fa fa-level-up m-r-5"></i><small>25% higher</small></div>
                             </div>
@@ -50,8 +50,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="ibox bg-info color-white widget-stat">
                             <div class="ibox-body">
-                                <h2 class="m-b-5 font-strong">1250</h2>
-                                <div class="m-b-5">UNIQUE VIEWS</div><i class="ti-bar-chart widget-stat-icon"></i>
+                                <h2 class="m-b-5 font-strong">{{count(App\Contestants::All())}}</h2>
+                                <div class="m-b-5">Contestants</div><i class="ti-bar-chart widget-stat-icon"></i>
                                 <div><i class="fa fa-level-up m-r-5"></i><small>17% higher</small></div>
                             </div>
                         </div>

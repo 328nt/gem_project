@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('export', 'ExcelController@export')->name('export');
+Route::get('exportcont', 'ExcelController@exportcont')->name('export_cont');
+Route::get('importExportView', 'ExcelController@importExportView');
+Route::post('import', 'ExcelController@import')->name('import');
 
 Route::get('register', 'PagesController@create');
 Route::post('register', 'PagesController@store')->name('register');
