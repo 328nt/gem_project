@@ -128,6 +128,6 @@ class ContestantsController extends Controller
     {
         $cont = Contestants::find($id);
         $cont->delete();
-        return redirect('admin/contestants/list');
+        return redirect('admin/contestants/list')->with('msg', 'Xóa bài thi thành công !');
     }
 }

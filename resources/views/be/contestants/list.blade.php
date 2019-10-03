@@ -80,29 +80,8 @@ list
                         <td>{{$cont->link}}</td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
                                 href="admin/contestants/edit/{{$cont->id}}">Edit {{$cont->id}}</a></td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal"
-                                data-target="#myModal2" href="admin/contestants/delete/{{$cont->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/contestants/delete/{{$cont->id}}"> Delete</a></td>
 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal2" role="dialog" style="padding-top: 90px;">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Xóa nhân viên</p>
-                                <a class="btn btn-danger" href="admin/contestants/delete/{{$cont->id}}">Xóa</a>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
                     </tr>
                     @endforeach
                 </tbody>

@@ -54,6 +54,7 @@ class NewsController extends Controller
         $news->slug_title = str_slug($rq->title);
         $news->description = $rq->description;
         $news->content = $rq->content;
+        $news->hightlight = $rq->hl;
         if ($rq->hasFile('image')) {
             $file = $rq->file('image');
             $name = $file->getClientOriginalName();
@@ -113,6 +114,7 @@ class NewsController extends Controller
         $new->slug_title = str_slug($rq->title);
         $new->description = $rq->description;
         $new->content = $rq->content;
+        $new->hightlight = $rq->hl;
         if ($rq->HasFile('image')) {
             $file = $rq->file('image');
             $name = $file->getClientOriginalName();

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('export', 'ExcelController@export')->name('export');
 Route::get('exportcont', 'ExcelController@exportcont')->name('export_cont');
@@ -21,7 +21,14 @@ Route::get('importExportView', 'ExcelController@importExportView');
 Route::post('import', 'ExcelController@import')->name('import');
 
 Route::get('register', 'PagesController@create');
-Route::post('register', 'PagesController@store')->name('register');
+// Route::post('register', 'PagesController@store')->name('register');
+
+
+Route::get('/', 'PagesController@index');
+Route::post('/register', 'PagesController@store')->name('register');
+Route::get('success', 'PagesController@success');
+Route::get('news.html', 'PagesController@pagenews');
+Route::get('news/{id}/{slug_title}.html', 'PagesController@singlenew');
 
 
 Route::get('admin/login', 'UserController@getlogin');

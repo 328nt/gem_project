@@ -47,29 +47,8 @@ list
                         <td>{{ substr($new->content,0,80) }} ...</td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
                         href="admin/news/edit/{{$new->id}}">Edit</a></td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a data-toggle="modal"
-                                data-target="#myModal" href="admin/news/delete/{{$new->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a  href="admin/news/delete/{{$new->id}}">{{$new->id}} Delete</a></td>
                                 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog" style="padding-top: 90px;">
-                        <div class="modal-dialog">
-    
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Xóa bài viết</p>
-                                    <a class="btn btn-danger" href="admin/news/delete/{{$new->id}}">Xóa</a>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
                     </tr>
                     @endforeach
                 </tbody>

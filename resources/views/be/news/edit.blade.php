@@ -42,6 +42,22 @@ add
                             <input class="form-control" name="image" type="file">
                         </div>
                     </div>
+                    
+                    <div class="form-group">
+                        <label>spotlight</label>
+                        <label class="radio-inline">
+                            <input name="hl" @if( $new->hightlight == 0 )
+                            {{ "checked" }}
+                            @endif value="0" type="radio">no
+                        </label>
+                        <label class="radio-inline">
+                            <input name="hl"
+                            @if( $new->hightlight == 1 )
+                                {{ "checked" }}
+                                @endif
+                                value="1" type="radio">yes
+                        </label>
+                    </div>
                 <div class="form-group row">
                     <div class="col-sm-10 ml-sm-auto">
                         <button class="btn btn-info" type="submit">Submit</button>

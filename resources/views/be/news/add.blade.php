@@ -33,13 +33,23 @@ add
                 
                 <div class="form-group">
                         <label>Content</label>
-                        <textarea id="summernote"  rows="5" name="content">content</textarea>
+                        <textarea id="summernote"  rows="5" placeholder="Content" name="content"></textarea>
                     </div>
                 <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="image" type="file">
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>spotlight</label>
+                        <label class="radio-inline">
+                            <input name="hl" value="0" type="radio">no
+                        </label>
+                        <label class="radio-inline">
+                            <input name="hl" value="1" type="radio">yes
+                        </label>
                     </div>
                 <div class="form-group row">
                     <div class="col-sm-10 ml-sm-auto">
