@@ -45,7 +45,7 @@ add
                     <div class="form-group">
                         <label>spotlight</label>
                         <label class="radio-inline">
-                            <input name="hl" value="0" type="radio">no
+                            <input name="hl" value="0" type="radio" checked>no
                         </label>
                         <label class="radio-inline">
                             <input name="hl" value="1" type="radio">yes

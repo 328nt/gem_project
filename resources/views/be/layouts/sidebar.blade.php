@@ -15,8 +15,8 @@
                 </a>
             </li>
             <li class="heading">FEATURES</li>
-
-
+            
+            @if (Auth::User()->role == 2)
             <li>
                 <a href="javascript:;"><i class="sidebar-item-icon fa fa-smile-o"></i>
                     <span class="nav-label">Users</span><i class="fa fa-angle-left arrow"></i></a>
@@ -30,18 +30,6 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;"><i class="sidebar-item-icon fa fa-map"></i>
-                    <span class="nav-label">News</span><i class="fa fa-angle-left arrow"></i></a>
-                <ul class="nav-2-level collapse">
-                    <li>
-                        <a href="admin/news/list">List</a>
-                    </li>
-                    <li>
-                        <a href="admin/news/add">add</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
                 <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
                     <span class="nav-label">Contestant</span><i class="fa fa-angle-left arrow"></i></a>
                 <ul class="nav-2-level collapse">
@@ -50,6 +38,19 @@
                     </li>
                     <li>
                         <a href="admin/contestants/add">add</a>
+                    </li>
+                </ul>
+            </li>
+            @endif
+            <li>
+                <a href="javascript:;"><i class="sidebar-item-icon fa fa-map"></i>
+                    <span class="nav-label">News</span><i class="fa fa-angle-left arrow"></i></a>
+                <ul class="nav-2-level collapse">
+                    <li>
+                        <a href="admin/news/list">List</a>
+                    </li>
+                    <li>
+                        <a href="admin/news/add">add</a>
                     </li>
                 </ul>
             </li>

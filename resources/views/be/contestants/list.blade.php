@@ -33,6 +33,7 @@ list
                         <th>Phone Number</th>
                         <th>Name link</th>
                         <th>Link</th>
+                        <th>Date</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -55,6 +56,7 @@ list
                         <th>Phone Number</th>
                         <th>Name link</th>
                         <th>Link</th>
+                        <th>Date</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -78,8 +80,9 @@ list
                         <td>{{$cont->phone}}</td>
                         <td>{{$cont->name_link}}</td>
                         <td>{{$cont->link}}</td>
+                        <td>{{date('d/m/Y', strtotime($cont->created_at))}}</td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
-                                href="admin/contestants/edit/{{$cont->id}}">Edit {{$cont->id}}</a></td>
+                                href="admin/contestants/edit/{{$cont->id}}">Edit</a></td>
                         <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/contestants/delete/{{$cont->id}}"> Delete</a></td>
 
                     </tr>

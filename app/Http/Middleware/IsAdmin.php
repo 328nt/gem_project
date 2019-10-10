@@ -18,7 +18,7 @@ class IsAdmin
     {
         if (Auth::check()) {
             $user = Auth::User();
-            if ($user->role == 1) {
+            if ($user) {
                 return $next($request);
             } else {
                 return redirect('admin/login')->with('msg','chưa đủ đẹp zai để đăng nhập');
