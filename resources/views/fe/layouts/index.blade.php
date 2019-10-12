@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Tin tức</title>
+<title>GEM - @yield('title')</title>
 <base href="{{asset('')}}">
 <link rel="shortcut icon" type="image/png" href="fe_assets/images/logo-small.png"/>
 <link rel='stylesheet'   href="fe_assets/css/bootstrap8e83.css?ver=4.9.10"  media='all' />

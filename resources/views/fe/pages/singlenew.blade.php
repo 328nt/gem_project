@@ -1,4 +1,7 @@
 @extends('fe.layouts.index')
+@section('title')
+    Tin tức
+@endsection
 @section('content')
 
 <section class="services-carousel-section">
